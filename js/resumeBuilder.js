@@ -33,7 +33,8 @@ var profile = {
             "employer": "Cornell Tech",
             "position": "MBA Student",
             "source": "http://tech.cornell.edu/",
-            "date": "2014-2015",
+            "beginning_date": "2014",
+            "end_date": "Current",
             "link": "http://tech.cornell.edu/",
             "image_link": "http://www.fallsofficial.com/files/2014/09/Cornell.png"
         },
@@ -41,7 +42,8 @@ var profile = {
             "employer": "Croscon",
             "position": "MBA Intern",
             "source": "http://www.croscon.com/",
-            "date": "2014",
+            "beginning_date": "2014",
+            "end_date": "2014",
             "link": "http://www.croscon.com/",
             "image_link": "https://pbs.twimg.com/profile_images/448570928700473344/h0xRp_to_400x400.png"
         },
@@ -49,7 +51,8 @@ var profile = {
             "employer": "Appinions",
             "position": "Analyst",
             "source": "http://www.appinions.com/",
-            "date": "2012-2014",
+            "beginning_date": "2012",
+            "end_date": "2014",
             "link": "http://www.appinions.com/",
             "image_link": "https://pbs.twimg.com/profile_images/2597231983/jkjaf08nnf2pay487zra.jpeg"
         },
@@ -57,7 +60,8 @@ var profile = {
             "employer": "The Boston Consulting Group",
             "position": "Associate",
             "source": "http://www.bcg.com/",
-            "date": "2011-2012",
+            "beginning_date": "2011",
+            "end_date": "2012",
             "link": "http://www.bcg.com/",
             "image_link": "http://utsbsoc.com/wp-content/uploads/2012/07/bcg-icon.png"
         }
@@ -68,7 +72,8 @@ var profile = {
             "location": "New York City, NY",
             "degree": "MBA",
             "source": "http://tech.cornell.edu/",
-            "dates": "2014-2015",
+            "beginning_date": "2014",
+            "end_date": "2015",
             "link": "http://tech.cornell.edu/",
             "image_link": "http://www.fallsofficial.com/files/2014/09/Cornell.png"
         },
@@ -78,7 +83,8 @@ var profile = {
             "degree": "BS",
             "source": "http://web.mit.edu/",
             "major": "Mechanical Engineering",
-            "dates": "2006-2010",
+            "beginning_date": "2006",
+            "end_date": "2010",
             "link": "http://web.mit.edu/",
             "image_link": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/321px-MIT_logo.svg.png"
         },
@@ -88,7 +94,8 @@ var profile = {
             "degree": "BS",
             "source": "http://web.mit.edu/",
             "major": "Management Science",
-            "dates": "2006-2010",
+            "beginning_date": "2006",
+            "end_date": "2010",
             "link": "http://web.mit.edu/",
             "image_link": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/321px-MIT_logo.svg.png"
         },
@@ -98,7 +105,8 @@ var profile = {
             "degree": "Nano-Degree",
             "source": "udacity.com",
             "major": "Web Development",
-            "dates": "2015",
+            "beginning_date": "2015",
+            "end_date": "2015",
             "link": "udacity.com",
             "image_link": "https://forums.udacity.com/upfiles/udacity-logo.jpg"
         }
@@ -139,47 +147,47 @@ var profile = {
         {
             "text": "NLP",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Product Management",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Agile Development",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Strategy",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Wireframe",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "PowerPoint",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Excel",
             "relevance": "0.8",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Tableau",
             "relevance": "0.7",
-            "source": ""
+            "source": "https://www.google.com/"
         },
         {
             "text": "Microsoft Office",
             "relevance": "0.2",
-            "source": ""
+            "source": "https://www.google.com/"
         }
     ]
 
@@ -214,7 +222,9 @@ for (job in profile.jobs){
         +HTMLworkExperienceSource.replace("%source%",profile.jobs[job].source)
         +HTMLworkExperiencePosition.replace("%position%",profile.jobs[job].position)
         +HTMLworkExperienceEmployer.replace("%employer%",profile.jobs[job].employer)
-        +HTMLworkExperienceDate.replace("%date%",profile.jobs[job].date));
+        +HTMLworkExperienceBeginningDate.replace("%date%",profile.jobs[job].beginning_date)
+        +HTMLworkExperienceEndDate.replace("%date%",profile.jobs[job].end_date)
+        +HTMLworkExperienceDateEnd);
 }
 
 $("#resume-main").append(HTMLeducationExperiences);
@@ -229,13 +239,15 @@ for (school in profile.schools){
         +HTMLeducationExperienceDegree.replace("%degree%",profile.schools[school].degree)
         +major
         +HTMLeducationExperienceSchool.replace("%school%",profile.schools[school].school)
-        +HTMLeducationExperienceDate.replace("%date%",profile.schools[school].dates));
+        +HTMLeducationExperienceBeginningDate.replace("%date%",profile.schools[school].beginning_date)
+        +HTMLeducationExperienceEndDate.replace("%date%",profile.schools[school].end_date)
+        +HTMLeducationExperienceDateEnd);
 }
 
 $("#resume-main").append(HTMLrelevantTopics);
 for (topic in profile.topics) {
     if(profile.topics[topic].relevance/1>0.5){
-        $("#topicList").append(HTMLrelevantTopic.replace("%topic%",profile.topics[topic].text));
+        $("#topicList").append((HTMLrelevantTopic.replace("%topic%",profile.topics[topic].text)).replace("%link%",profile.topics[topic].source));
     }
 }
 
@@ -246,6 +258,8 @@ for(website in profile.websites) {
     $(".web-entry").last().append(HTMLfromTheWebLink.replace("%web-url%",profile.websites[website].link));
     $(".web-entry").last().append(HTMLfromTheWebSnippet.replace("%web-site-snippet%",profile.websites[website].snippet));
 }
+
+$("#resume-main").append(HTMLfooter);
 }
 
 profile.display();

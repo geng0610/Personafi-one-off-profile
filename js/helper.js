@@ -35,32 +35,38 @@ var HTMLsocialIcon = '<a href = "%link%"><img id="%social%-icon" src="images/%so
 
 var HTMLworkExperiences = '<div id="workExperience" class="row section"><div class="col-md-3 section-title"><h3>Work History:</h3></div><div id = "work-experiences" class="col-md-9 section-description"></div></div><hr>';
 
-var HTMLworkExperienceStart = '<div class = "entry"><div class="row"><div class="col-md-9 entry-description">';
+var HTMLworkExperienceStart = '<div class = "entry"><div class="row"><div class="col-md-8 entry-description">';
 var HTMLworkExperienceLink = '<a href = "%link%"><img src="%image-source%" alt="work-logo" class="experience-icon" ></a>';
 var HTMLworkExperienceSource = '<a href=%source% class = "entry-description-title">';
 var HTMLworkExperiencePosition = '%position%';
 var HTMLworkExperienceEmployer = ', %employer%</a></div>';
-var HTMLworkExperienceDate = '<div class="col-md-2 work-date"><span class = "entry-description-date">%date%</span></div></div>';
+var HTMLworkExperienceBeginningDate = '<div class="col-md-3 work-date"><span class = "entry-description-date">%date%'
+var HTMLworkExperienceEndDate = ' - %date%'
+var HTMLworkExperienceDateEnd = '</span></div></div>';
 
 var HTMLeducationExperiences = '<div id="educationExperience" class="row section"><div class="col-md-3 section-title"><h3>Education:</h3></div><div id = "education-experiences" class="col-md-9 section-description"></div></div><hr>';
 
-var HTMLeducationExperienceStart = '<div class = "entry"><div class="row"><div class="col-md-9 entry-description">';
+var HTMLeducationExperienceStart = '<div class = "entry"><div class="row"><div class="col-md-8 entry-description">';
 var HTMLeducationExperienceLink = '<a href = "%link%"><img src="%image-source%" alt="work-logo" class="experience-icon" ></a>';
 var HTMLeducationExperienceSource = '<a href=%source% class = "entry-description-title">';
 var HTMLeducationExperienceDegree = '%degree%';
 var HTMLeducationExperienceMajor = ', %major%';
 var HTMLeducationExperienceSchool = ', %school%</a></div>';
-var HTMLeducationExperienceDate = '<div class="col-md-2 work-date"><span class = "entry-description-date">%date%</span></div></div></div>';
+var HTMLeducationExperienceBeginningDate = '<div class="col-md-3 work-date"><span class = "entry-description-date">%date%'
+var HTMLeducationExperienceEndDate = ' - %date%'
+var HTMLeducationExperienceDateEnd = '</span></div></div>';
 
 var HTMLrelevantTopics = '<div id="relevantTopics" class="row section"><div class="col-md-3 section-title"><h3>Relevant Topics:</h3></div><div class="col-md-9 section-description"><div class = "entry"><div id = "topicList" class="row"></div></div></div></div><hr>';
-var HTMLrelevantTopic ='<button class="topic"> %topic% </button>';
+var HTMLrelevantTopic ='<a href="%link%"><span class="topic"> %topic% </span></a>';
 
 var HTMLfromTheWebSection='<div id="fromTheWeb" class="row section"><div class="col-md-3 section-title"><h3>From the Web:</h3></div><div id="fromTheWebSection" class="col-md-9 section-description"></div></div><hr>';
 
-var HTMLfromTheWebEntry='<div id="fromTheWebEntry" class = "web-entry" style="border-top: 3px solid %color%"></div>';
+var HTMLfromTheWebEntry='<div id="fromTheWebEntry" class = "web-entry" style="border-top: 1px solid #EEEEEE; border-bottom: 2px solid %color%"></div>';
 var HTMLfromTheWebTitle='<div class="row"><div class="col-md-12"><a href="%web-url%" class="web-site-title">%link-title%</a></div></div>';
 var HTMLfromTheWebLink='<div class="row"><div class="col-md-12 web-site-link">%web-url%</div></div>';
 var HTMLfromTheWebSnippet='<div class="row"><div class="col-md-12 web-site-snippet">%web-site-snippet%</div></div>';
+
+var HTMLfooter='<div id="footer" class="row section"><div class="col-md-12"><h4>Powered by <a href = "http://personafi.io/"><img id="personafi-icon" src="images/personafi-icon.png"></a></h4></div></div>';
 
 /*
 Add and remove extra e-mail from display
